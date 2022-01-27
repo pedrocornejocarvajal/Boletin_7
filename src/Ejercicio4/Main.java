@@ -1,4 +1,4 @@
-package Textos;
+package Ejercicio4;
 
 public class Main {
 

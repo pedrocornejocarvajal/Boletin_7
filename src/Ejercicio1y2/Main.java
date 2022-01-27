@@ -1,7 +1,5 @@
-package Vehiculo.enumerado;
+package Ejercicio1y2;
 
-import java.sql.SQLOutput;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {

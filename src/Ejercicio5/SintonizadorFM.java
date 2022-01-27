@@ -1,4 +1,4 @@
-package Radio;
+package Ejercicio5;
 
 public class SintonizadorFM {
     /** tanto cada salto de frecuencia con los frecuencias máximas y mínimas son constantes finales de la clase

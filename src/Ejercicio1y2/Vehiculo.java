@@ -1,4 +1,4 @@
-package Vehiculo.enumerado;
+package Ejercicio1y2;
 
 public class Vehiculo {
     /**

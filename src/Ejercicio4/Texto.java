@@ -1,4 +1,4 @@
-package Textos;
+package Ejercicio4;
 
 //enum Vocales {a,e,i,o,u,á, é, í, ó,ú,ü}
 

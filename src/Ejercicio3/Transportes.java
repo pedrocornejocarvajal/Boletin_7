@@ -1,7 +1,4 @@
-package Medios.Transporte;
-
-import java.sql.SQLOutput;
-import java.util.Date;
+package Ejercicio3;
 
 // la clase ENUM la he creado con una relación de transportes de menor a mayor rapidez
 enum Transporte {COCHE, CAMION, BARCO, TREN, AVION};
