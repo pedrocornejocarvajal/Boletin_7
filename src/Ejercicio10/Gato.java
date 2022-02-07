@@ -31,8 +31,16 @@ public class Gato implements Comparable<Gato>{
     public int compareTo(Gato gato) {
         return (this.nombre).compareTo(gato.getNombre());
     }
+
     public int compareTo2(Gato gato) {
-        return this.edad-gato.edad;
+        int comp = 0;
+        if(this.getEdad() > gato.getEdad()){
+            comp = 1;
+        }
+        else if(this.getEdad() < gato.getEdad()){
+            comp = -1;
+        }
+        return comp;
     }
     public String toString(){
         return "Nombre: "+ this.nombre+ " Raza: "+ this.raza+ " Color: "+ this.color + " Edad: "+ this.edad;

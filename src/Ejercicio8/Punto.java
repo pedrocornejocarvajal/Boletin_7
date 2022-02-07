@@ -36,6 +36,7 @@ public class Punto {
         }
         return resultado;
     }
+
 //El método distancia(), sin argumentos, que calcula la distancia de un objeto de la
 // clase Punto al origen de coordenadas.
 //La distancia entre dos puntos es igual a la longitud del segmento que los une. Por lo tanto, en matemáticas,
@@ -44,6 +45,7 @@ public class Punto {
 // Dadas las coordenadas de dos puntos distintos:    A(x1,y1) y B(x2,y2)
 // La fórmula de la distancia entre dos puntos es:
 // d(A,B) = sqrt{(x2-x1)^2+(y2-y1)^2
+
     public double distanciaAlOrigen() {
         double resultado = Math.sqrt(Math.pow((this.x),2) + Math.pow((this.y),2));
         System.out.println("x al cuadrado es " + Math.pow((this.x),2));

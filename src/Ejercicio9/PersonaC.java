@@ -73,7 +73,7 @@ public class PersonaC implements Cloneable {
             System.out.println("no se puede clonar el objeto");
         }
         objeto.pesoAlturaC = (PesoAlturaC) objeto.pesoAlturaC.clone();
-        return (PersonaC)objeto;
+        return objeto;
     }
 
     @Override

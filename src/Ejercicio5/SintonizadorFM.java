@@ -35,6 +35,7 @@ public class SintonizadorFM {
         public void down(){
         this.frecuencia -= SALTO;
         if (this.frecuencia < FRECUENCIAMIN){
+
             this.frecuencia=FRECUENCIAMAX;
         }
     }

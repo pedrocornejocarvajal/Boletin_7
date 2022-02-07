@@ -20,45 +20,12 @@ public class Texto {
     public String getTexto(){
         return this.texto;
     }
-    /**
-     * método para añadir un carácter al inicio de la cadena si hay espacio
-     * precondicion: ninguna
-     * postcondicion. si el tamaño del texto es el máximo, no se puede añadir el carácter
-     * @param c. caracter a incluir al principio de la cadea
-     * @return booleano indicando si se ha podido realizar la acción
-     * el método compruebaa que la longitud del texto es menor al máximo y le añade el carácter
-     */
-        public boolean añadirCaracterPpio(char c){
-        boolean resultado=false;
-        if (this.texto.length()<this.tamañoMax) {
-            this.texto = c + this.texto;
-            resultado=true;
-        }
-        return resultado;
-    }
 
-    /**
-     * método para añadir un carácter al final de la cadena si hay espacio
-     * precondicion: ninguna
-     * postcondicion. si el tamaño del texto es el máximo, no se puede añadir el carácter
-     * @param c. caracter a incluir al final de la cadea
-     * @return booleano indicando si se ha podido realizar la acción
-     * el método compruebaa que la longitud del texto es menor al máximo y le añade el carácter
-     *
-     */
-        public boolean añadirCaracterFinal(char c){
-        boolean resultado=false;
-        if (this.texto.length()<this.tamañoMax) {
-            this.texto = this.texto + c;
-            resultado=true;
-        }
-        return resultado;
-    }
     //añadir una cadena al principio si hay espacio
     public boolean añadirCadenaPpio(String cadena){
         boolean resultado=false;
-        if ((this.texto.length()+ cadena.length())<this.tamañoMax) {
-            this.texto = cadena+ this.texto;
+        if (comprobacionDeLlenado(cadena)) {
+            this.texto = cadena + this.texto;
             resultado=true;
         }
         return resultado;
@@ -66,7 +33,7 @@ public class Texto {
     //añadir una cadena al final si hay espacio
     public boolean añadirCadenaFinal(String cadena){
         boolean resultado=false;
-        if ((this.texto.length()+ cadena.length())<this.tamañoMax) {
+        if (comprobacionDeLlenado(cadena)) {
             this.texto = this.texto + cadena;
             resultado=true;
         }
@@ -77,6 +44,7 @@ public class Texto {
 
     public int contarVocales() {
         int resultado = 0;
+
         for (int i = 0; i < this.texto.length(); i++) {
             if (esVocal(this.texto.charAt(i))) {
                 resultado++;
@@ -94,6 +62,16 @@ public boolean esVocal(char c){
 
         return resultado;
 
+}
+
+private boolean comprobacionDeLlenado(String cadena){
+        boolean terminar = false;
+        int len = cadena.length();
+        int textoLen = getTexto().length();
+        if((tamañoMax - textoLen) >= len ){
+            terminar = true;
+        }
+    return terminar;
 }
 
 }
